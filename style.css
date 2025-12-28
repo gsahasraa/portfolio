@@ -1,0 +1,474 @@
+/* ------------------ GLOBAL ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+     background: #000000;
+     color: #fff;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+/* ------------------ HEADER ------------------ */
+#header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav .fas {
+    display: none;
+}
+
+/* ------------------ HEADER TEXT ------------------ */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* ------------------ ABOUT ------------------ */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ------------------ TABS ------------------ */
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* ------------------ CERTIFICATIONS ------------------ */
+#Certifications {
+    padding: 80px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.services-list div i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/* Certifications Section Links */
+#Certifications a {
+    color: #ff004f;
+    text-decoration: none;
+}
+
+#Certifications a:hover {
+    color: #fff;
+}
+
+
+/* ------------------ PORTFOLIO ------------------ */
+#portfolio {
+    padding: 80px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+
+}
+#Certifications a {
+    color: #ff004f;
+    text-decoration: none;
+}
+
+
+/* ------------------ CODING PROFILES ------------------ */
+.coding-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.coding-list div {
+    background: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.coding-list div:hover {
+    background: #ff004f;
+	 
+}
+/* Coding Profiles Section Links */
+#Coding-Profiles a {
+    color: #ff004f;
+    text-decoration: none;
+}
+
+#Coding-Profiles a:hover {
+    color: #fff;
+}
+
+/* ------------------ BUTTON ------------------ */
+.btn {
+    display: inline-block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ff004f;
+    transition: 0.5s;
+}
+
+/* ------------------ BUTTON ------------------ */
+.btn {
+    display: inline-block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ff004f;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+.btn.btn2 {
+    background: #ff004f;
+}
+.btn.btn2 {
+    background: transparent; /* default transparent */
+    color: #ff004f;          /* pink text */
+    border: 1px solid #ff004f;
+}
+
+.btn.btn2:hover {
+    background: #ff004f;     /* pink on hover */
+    color: #fff;             /* white text on hover */
+}
+
+
+
+
+/* ------------------ CONTACT ------------------ */
+#contact {
+    padding: 80px 0; /* same as other sections */
+    color: #ababab;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; /* adds spacing between left and right */
+}
+
+.contact-left,
+.contact-right {
+    flex-basis: 45%; /* gives more balanced spacing */
+}
+
+.contact-left p {
+    margin-top: 20px;
+}
+#contact a {
+    color: #ff004f;  /* same pink as your theme */
+    text-decoration: none;
+}
+
+
+
+form input,
+form textarea {
+    margin: 15px 0; /* same spacing as other sections */
+}
+
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 25px;
+    color: #ababab;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media only screen and (max-width: 768px) {
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+}
+/* Reverse About Section Layout */
+#about .row {
+    flex-direction: row-reverse;
+}
+.about-col-1 {
+    padding-left: 40px;
+}
+
+.about-col-2 {
+    padding-right: 40px;
+}
+
+
+
+
+#creative {
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+#creative .sub-title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#creative p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ababab;
+}
+
+#creative .social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    color: #ff004f;  /* your theme pink */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#creative .social-icons a:hover {
+    color: #FFD700;  /* optional gold on hover for creative flair */
+    transform: translateY(-5px);
+}
