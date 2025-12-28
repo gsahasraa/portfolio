@@ -32,7 +32,7 @@
 
     </div>
 <!----------------------------about--------------------------------->
-<div id="about">
+<div id="about" class="reveal">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
@@ -86,7 +86,8 @@
 
 
 <!--------------------------------certfications----------------------------------------->
-<div id="Certifications">
+<div id="Certifications" class="reveal">
+
     <div class="container">
         <h1 class="sub-title">Certifications</h1>
         <div class="services-list">
@@ -117,7 +118,8 @@
 
 
 <!-- ----------portfolio----=------------------------------------------ -->
-<div id="portfolio">
+<div id="portfolio" class="reveal">
+
     <div class="container">
         <h1 class="sub-title">Personal Projects</h1>
         <div class="work-list">
@@ -184,7 +186,8 @@
 
 <!-- ----------contact------------- -->
 <!-- Contact Section -->
-<div id="contact">
+<div id="contact" class="reveal">
+
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -263,6 +266,21 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+        reveals.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight - 100;
+
+            if (sectionTop < triggerPoint) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
 
