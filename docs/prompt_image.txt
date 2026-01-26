@@ -1,0 +1,2 @@
+Gemini prompt:
+A futuristic AI workspace, minimalistic, neon lighting, 4k, cinematic, clean UI, professional, high detail --v 6 --ar 16:9
