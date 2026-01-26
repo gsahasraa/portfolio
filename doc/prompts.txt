@@ -1,0 +1,47 @@
+PROMPT LIBRARY
+
+This section demonstrates how I can improve a prompt by step to achieve better outcomes.
+
+Example: The "Mentor" System Prompt
+Step 1 (Basic): "Help me solve a LeetCode problem."
+
+Problem: The AI directly spits out the answer. I learn nothing.
+
+Step 2 (Better): "Act as a tutor and provide me with hints for this problem."
+
+Problem: The AI is too generic or sometimes provides the code.
+
+Step 3 (My Engineered Prompt): > "You are my LeetCode mentor. 
+Rules:  No full code unless asked.  No jumping to the final answer. 
+Step-by-Step: 1. Ask about constraints first. 
+2. Provide hints about the pattern (such as Sliding Window). 
+3. Only provide the final code if I say 'give me the optimized solution'."
+
+Result: A superior AI agent that can actually teach.
+
+2. MULTI-MODAL PROMPT LIBRARY
+
+A) TEXT CONTENT (Blog Writing)
+Prompt: > "Write a 400-word blog post about prompt engineering. Use a professional but friendly tone. Include: What it is, why it matters for marketing, and a short conclusion."
+
+Why it works: It uses Structural Constraints. By giving the AI a specific outline, I ensure the output is organized and doesn’t wander off-topic.
+
+B) VISUALS (Image Generation)
+Prompt: > "A vibrant tech vlog thumbnail. A girl holding a laptop with glowing AI icons floating around. Use bold colors and a ‘NEW AI PROJECT’ banner. Style: Modern and high-contrast."
+
+Why it works: It uses Visual Modifiers. I specify the lighting, the mood, and the exact text needed to make the image “social media ready.”
+
+C) VIDEO (Script Generation)
+Prompt: > "Write a 30-second video script. Structure: 5-second hook, 20-second body (3 key points), and 5-second Call to Action (CTA)."
+
+Why it works: It uses Time-to-Token Logic. I break the script into time-based chunks so the AI knows exactly how much text to write for each part.
+
+3. TECHNICAL SKILLS SUMMARY
+
+Negative Constraints: Applying "DO NOT" constraints to prevent AI errors (hallucinations).
+
+Tone Control: Adjusting the tone of the AI speech (Professional, Creative, or Friendly).
+
+Few-Shot Prompting: Providing the AI with 2-3 examples to assist it in understanding difficult tasks.
+
+Python Automation: Applying simple code to automate these prompts for multiple subjects.
