@@ -16,6 +16,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Projects</a></li>
+		    <li><a href="#ai-content">ai-content</a></li>
                     <li><a href="#Coding-Profiles">Coding Profiles</a></li>
                     <li><a href="#Certifications">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -209,38 +210,41 @@ control.</p>
   <div class="container">
     <h1 class="sub-title">Prompt Library</h1>
 
+    <div class="prompt-actions">
+      <button class="btn" id="copyAllBtn">Copy All Prompts</button>
+    </div>
+
     <div class="work-list">
       <div class="work">
-        <div class="layer" style="height:100%; padding:20px;">
+        <div class="layer">
           <h3>Content Prompt</h3>
-          <pre id="contentPrompt"></pre>
+          <button class="prompt-btn" onclick="openModal('contentPrompt')">View Prompt</button>
         </div>
       </div>
 
       <div class="work">
-        <div class="layer" style="height:100%; padding:20px;">
+        <div class="layer">
           <h3>Image Prompt</h3>
-          <pre id="imagePrompt"></pre>
+          <button class="prompt-btn" onclick="openModal('imagePrompt')">View Prompt</button>
         </div>
       </div>
 
       <div class="work">
-        <div class="layer" style="height:100%; padding:20px;">
+        <div class="layer">
           <h3>Video Prompt</h3>
-          <pre id="videoPrompt"></pre>
+          <button class="prompt-btn" onclick="openModal('videoPrompt')">View Prompt</button>
         </div>
       </div>
 
       <div class="work">
-        <div class="layer" style="height:100%; padding:20px;">
+        <div class="layer">
           <h3>LeetCode Prompt</h3>
-          <pre id="leetcodePrompt"></pre>
+          <button class="prompt-btn" onclick="openModal('leetcodePrompt')">View Prompt</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 
@@ -373,6 +377,35 @@ control.</p>
     }
   }
   loadPrompts();
+</script>
+<script>
+  function openModal(id) {
+    const title = id.replace("Prompt", " Prompt");
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalText").innerText = document.getElementById(id).innerText;
+    document.getElementById("promptModal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("promptModal").style.display = "none";
+  }
+
+  document.getElementById("copyModalBtn").addEventListener("click", () => {
+    const text = document.getElementById("modalText").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Prompt copied!");
+  });
+
+  document.getElementById("copyAllBtn").addEventListener("click", () => {
+    const allText =
+      document.getElementById("contentPrompt").innerText + "\n\n" +
+      document.getElementById("imagePrompt").innerText + "\n\n" +
+      document.getElementById("videoPrompt").innerText + "\n\n" +
+      document.getElementById("leetcodePrompt").innerText;
+
+    navigator.clipboard.writeText(allText);
+    alert("All prompts copied!");
+  });
 </script>
 
 
