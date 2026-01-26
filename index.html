@@ -342,16 +342,29 @@
   </script>
 <script>
   async function loadPrompts() {
-    document.getElementById("contentPrompt").innerText = await fetch('doc/contentprompt.txt').then(r => r.text());
-    document.getElementById("imagePrompt").innerText = await fetch('doc/imageprompt.txt').then(r => r.text());
-    document.getElementById("videoPrompt").innerText = await fetch('doc/videoprompt.txt').then(r => r.text());
-    document.getElementById("leetcodePrompt").innerText = await fetch('doc/leetcodeprompt.txt').then(r => r.text());
+    try {
+      const c = await fetch('/doc/contentprompt.txt');
+      console.log("content status:", c.status);
+      document.getElementById("contentPrompt").innerText = await c.text();
+
+      const i = await fetch('/doc/imageprompt.txt');
+      console.log("image status:", i.status);
+      document.getElementById("imagePrompt").innerText = await i.text();
+
+      const v = await fetch('/doc/videoprompt.txt');
+      console.log("video status:", v.status);
+      document.getElementById("videoPrompt").innerText = await v.text();
+
+      const l = await fetch('/doc/leetcodeprompt.txt');
+      console.log("leetcode status:", l.status);
+      document.getElementById("leetcodePrompt").innerText = await l.text();
+    } catch (err) {
+      console.error("PROMPT LOAD ERROR", err);
+    }
   }
   loadPrompts();
 </script>
-<script>
-  console.log("PROMPT SCRIPT RUNNING");
-</script>
+
 
 
 </body>
