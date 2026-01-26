@@ -468,27 +468,40 @@ form input, form textarea {
 
 
 /* ------------------ PROMPT LIBRARY FIX (IMPORTANT) ------------------ */
+/* ------------------ PROMPT LIBRARY ALIGNMENT ------------------ */
+#prompt-library .work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
 #prompt-library .work {
   background: #262626;
   border-radius: 12px;
-  padding: 20px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 #prompt-library .layer {
-  position: relative;
-  height: auto !important;
+  height: 100%;
   background: transparent !important;
-  padding: 0 !important;
+  padding: 25px;
+}
+
+#prompt-library h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #fff;
 }
 
 #prompt-library pre {
-  color: #fff;              /* white text */
-  font-size: 16px;
+  color: #fff;
+  font-size: 14px;
   white-space: pre-wrap;
   word-break: break-word;
   background: #111;
-  padding: 15px;
+  padding: 18px;
   border-radius: 10px;
   overflow: auto;
+  max-height: 330px;
 }
