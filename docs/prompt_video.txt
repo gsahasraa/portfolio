@@ -1,5 +1,0 @@
-Generate a 30-second explainer video script about prompt engineering.
-Include:
-- Hook
-- 3 key points
-- CTA
