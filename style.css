@@ -472,3 +472,11 @@ form input, form textarea {
     color: #FFD700;  /* optional gold on hover for creative flair */
     transform: translateY(-5px);
 }
+/* ------------------ AI CONTENT & PROMPT LIBRARY ------------------ */
+#ai-content, #prompt-library {
+  padding: 80px 0;
+}
+
+#ai-content .work-list, #prompt-library .work-list {
+  margin-top: 50px;
+}

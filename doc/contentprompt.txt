@@ -1,0 +1,6 @@
+Write a 400-word blog post about prompt engineering for AI content generation.
+Use a professional tone, friendly style, and include:
+- What prompt engineering is
+- Why it matters
+- Example prompts for marketing
+- A small conclusion
