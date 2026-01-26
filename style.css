@@ -498,3 +498,10 @@ form input, form textarea {
   color: #ddd;
   font-size: 14px;
 }
+#prompt-library pre {
+  color: #111;          /* dark text */
+  font-size: 16px;      /* readable size */
+  white-space: pre-wrap; /* allow line breaks */
+  word-break: break-word;
+}
+
