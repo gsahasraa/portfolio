@@ -343,19 +343,19 @@
 <script>
   async function loadPrompts() {
     try {
-      const c = await fetch('/doc/contentprompt.txt');
+      const c = await fetch('doc/contentprompt.txt');
       console.log("content status:", c.status);
       document.getElementById("contentPrompt").innerText = await c.text();
 
-      const i = await fetch('/doc/imageprompt.txt');
+      const i = await fetch('doc/imageprompt.txt');
       console.log("image status:", i.status);
       document.getElementById("imagePrompt").innerText = await i.text();
 
-      const v = await fetch('/doc/videoprompt.txt');
+      const v = await fetch('doc/videoprompt.txt');
       console.log("video status:", v.status);
       document.getElementById("videoPrompt").innerText = await v.text();
 
-      const l = await fetch('/doc/leetcodeprompt.txt');
+      const l = await fetch('doc/leetcodeprompt.txt');
       console.log("leetcode status:", l.status);
       document.getElementById("leetcodePrompt").innerText = await l.text();
     } catch (err) {
