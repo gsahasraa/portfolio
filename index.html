@@ -203,33 +203,34 @@
       <div class="work">
         <div class="layer" style="height:100%; padding:20px;">
           <h3>Content Prompt</h3>
-          <p>Stored in doc/contentprompt.txt</p>
+          <pre id="contentPrompt"></pre>
         </div>
       </div>
 
       <div class="work">
         <div class="layer" style="height:100%; padding:20px;">
           <h3>Image Prompt</h3>
-          <p>Stored in doc/imageprompt.txt</p>
+          <pre id="imagePrompt"></pre>
         </div>
       </div>
 
       <div class="work">
         <div class="layer" style="height:100%; padding:20px;">
           <h3>Video Prompt</h3>
-          <p>Stored in doc/videoprompt.txt</p>
+          <pre id="videoPrompt"></pre>
         </div>
       </div>
 
       <div class="work">
         <div class="layer" style="height:100%; padding:20px;">
           <h3>LeetCode Prompt</h3>
-          <p>Stored in doc/leetcodeprompt.txt</p>
+          <pre id="leetcodePrompt"></pre>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 
@@ -339,6 +340,16 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+<script>
+  async function loadPrompts() {
+    document.getElementById("contentPrompt").innerText = await fetch('doc/contentprompt.txt').then(r => r.text());
+    document.getElementById("imagePrompt").innerText = await fetch('doc/imageprompt.txt').then(r => r.text());
+    document.getElementById("videoPrompt").innerText = await fetch('doc/videoprompt.txt').then(r => r.text());
+    document.getElementById("leetcodePrompt").innerText = await fetch('doc/leetcodeprompt.txt').then(r => r.text());
+  }
+  loadPrompts();
+</script>
+
 </body>
 </html>
 
