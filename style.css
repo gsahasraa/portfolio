@@ -464,10 +464,7 @@ form input, form textarea {
     transform: translateY(-5px);
 }
 
-/* ------------------ AI CONTENT & PROMPT LIBRARY ------------------ */
 
-
-/* ------------------ PROMPT LIBRARY FIX (IMPORTANT) ------------------ */
 /* ------------------ PROMPT LIBRARY ALIGNMENT ------------------ */
 #prompt-library .work-list {
   display: grid;
@@ -504,44 +501,4 @@ form input, form textarea {
   border-radius: 10px;
   overflow: auto;
   max-height: 330px;
-}
-/* ------------------ MODAL ------------------ */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-content {
-  background: #262626;
-  width: 80%;
-  max-width: 800px;
-  padding: 25px;
-  border-radius: 12px;
-  position: relative;
-}
-
-.modal-content pre {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-  max-height: 400px;
-  overflow: auto;
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
 }

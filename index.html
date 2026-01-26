@@ -206,46 +206,22 @@ control.</p>
 </div>
 
 <!-- ------------------ PROMPT LIBRARY ------------------ -->
+<!-- ------------------ PROMPT LIBRARY ------------------ -->
 <div id="prompt-library">
   <div class="container">
     <h1 class="sub-title">Prompt Library</h1>
 
-    <div class="prompt-actions">
-      <button class="btn" id="copyAllBtn">Copy All Prompts</button>
-    </div>
-
     <div class="work-list">
       <div class="work">
-        <div class="layer">
-          <h3>Content Prompt</h3>
-          <button class="prompt-btn" onclick="openModal('contentPrompt')">View Prompt</button>
-        </div>
-      </div>
-
-      <div class="work">
-        <div class="layer">
-          <h3>Image Prompt</h3>
-          <button class="prompt-btn" onclick="openModal('imagePrompt')">View Prompt</button>
-        </div>
-      </div>
-
-      <div class="work">
-        <div class="layer">
-          <h3>Video Prompt</h3>
-          <button class="prompt-btn" onclick="openModal('videoPrompt')">View Prompt</button>
-        </div>
-      </div>
-
-      <div class="work">
-        <div class="layer">
-          <h3>LeetCode Prompt</h3>
-          <button class="prompt-btn" onclick="openModal('leetcodePrompt')">View Prompt</button>
+        <div class="layer" style="height:100%; padding:20px;">
+          <h3>Prompt Library PDF</h3>
+          <p>Download all my prompts in one place.</p>
+          <a href="doc/prompts.pdf" download class="btn">Download Prompts PDF</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 
 <!-----------------------------------------Coding Prodiles---------------------------------------------->
@@ -354,61 +330,6 @@ control.</p>
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-<script>
-  async function loadPrompts() {
-    try {
-      const c = await fetch('doc/contentprompt.txt');
-      console.log("content status:", c.status);
-      document.getElementById("contentPrompt").innerText = await c.text();
-
-      const i = await fetch('doc/imageprompt.txt');
-      console.log("image status:", i.status);
-      document.getElementById("imagePrompt").innerText = await i.text();
-
-      const v = await fetch('doc/videoprompt.txt');
-      console.log("video status:", v.status);
-      document.getElementById("videoPrompt").innerText = await v.text();
-
-      const l = await fetch('doc/leetcodeprompt.txt');
-      console.log("leetcode status:", l.status);
-      document.getElementById("leetcodePrompt").innerText = await l.text();
-    } catch (err) {
-      console.error("PROMPT LOAD ERROR", err);
-    }
-  }
-  loadPrompts();
-</script>
-<script>
-  function openModal(id) {
-    const title = id.replace("Prompt", " Prompt");
-    document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalText").innerText = document.getElementById(id).innerText;
-    document.getElementById("promptModal").style.display = "flex";
-  }
-
-  function closeModal() {
-    document.getElementById("promptModal").style.display = "none";
-  }
-
-  document.getElementById("copyModalBtn").addEventListener("click", () => {
-    const text = document.getElementById("modalText").innerText;
-    navigator.clipboard.writeText(text);
-    alert("Prompt copied!");
-  });
-
-  document.getElementById("copyAllBtn").addEventListener("click", () => {
-    const allText =
-      document.getElementById("contentPrompt").innerText + "\n\n" +
-      document.getElementById("imagePrompt").innerText + "\n\n" +
-      document.getElementById("videoPrompt").innerText + "\n\n" +
-      document.getElementById("leetcodePrompt").innerText;
-
-    navigator.clipboard.writeText(allText);
-    alert("All prompts copied!");
-  });
-</script>
-
-
 
 </body>
 </html>
