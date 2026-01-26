@@ -464,4 +464,7 @@ form input, form textarea {
     transform: translateY(-5px);
 }
 
+#prompt-library .btn {
+  margin-top: 20px;
+}
 
